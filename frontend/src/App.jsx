@@ -1,5 +1,4 @@
 import {createBrowserRouter,RouterProvider} from "react-router-dom";
-import Navbar from './components/container/Navbar';
 import Login from "./Pages/Auth/Login";
 import Signup from "./Pages/Auth/Signup";
 import Home from "./Pages/Home";
