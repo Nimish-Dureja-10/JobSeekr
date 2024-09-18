@@ -3,6 +3,7 @@ import Login from "./Pages/Auth/Login";
 import Signup from "./Pages/Auth/Signup";
 import Browse from "./Pages/Browse";
 import Home from "./Pages/Home";
+import JobDescription from "./Pages/JobDescription";
 import Jobs from "./Pages/Jobs";
 import Profile from "./Pages/Profile";
 
@@ -22,6 +23,10 @@ const appRouter = createBrowserRouter([
   {
     path:"/jobs",
     element:<Jobs/>
+  },
+  {
+    path:"/job/:id",
+    element:<JobDescription/>
   },
   {
     path:"/browse",
