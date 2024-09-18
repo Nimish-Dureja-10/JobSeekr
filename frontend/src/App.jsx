@@ -1,8 +1,10 @@
 import {createBrowserRouter,RouterProvider} from "react-router-dom";
 import Login from "./Pages/Auth/Login";
 import Signup from "./Pages/Auth/Signup";
+import Browse from "./Pages/Browse";
 import Home from "./Pages/Home";
 import Jobs from "./Pages/Jobs";
+import Profile from "./Pages/Profile";
 
 const appRouter = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const appRouter = createBrowserRouter([
   {
     path:"/jobs",
     element:<Jobs/>
+  },
+  {
+    path:"/browse",
+    element:<Browse/>
+  }, 
+  {
+    path:"/profile",
+    element:<Profile/>
   }
 ]);
 
