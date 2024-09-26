@@ -5,7 +5,7 @@ import isAuthenticated from "../middlewares/isAuthenticated.js";
 const router = express.Router();
 
 router.post("/create/new",isAuthenticated,postJob);
-router.get("/get",isAuthenticated,getAllJobs);
+router.get("/get",getAllJobs);
 router.get("/get/:id",isAuthenticated,getJobById);
 router.get("/admin/get",isAuthenticated,getJobsByRecruiter);
 

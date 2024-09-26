@@ -24,7 +24,7 @@ const Profile = () => {
             <div className='flex justify-between'>
                 <div className='flex items-center gap-4'>
                     <Avatar className="h-24 w-24">
-                        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                        <AvatarImage src={user?.profile?.profilePhoto} alt="@shadcn" />
                     </Avatar>
                     <div>
                         <h1 className='font-medium text-xl'>{user.fullname}</h1>
@@ -58,12 +58,12 @@ const Profile = () => {
                     }
                 </div>
             </div>
-            <div className='grid w-full max-w-sm items-center gap-1.5 my-4'>
+            <div className='grid w-full max-w-xl items-center gap-1.5 my-4'>
                 <div className='flex gap-2 items-center'>
                     <Label className="text-md font-semibold">Resume -</Label>
                     {
-                        isResume ? <a href='https://google.com' target={'_blank'} className="text-blue-600 hover:underline bg-gray-200 px-8 rounded-full" >Link</a> 
-                        : <span>NA</span>
+                        isResume ? <a href={user?.profile?.resume} target={'blank'} className="text-blue-600 hover:underline bg-gray-200 px-8 rounded-full" >{user?.profile?.resumeOriginalName}</a> 
+                        : <span className='font-light text-gray-400'>NA</span>
                     }
                 </div>
             </div>
