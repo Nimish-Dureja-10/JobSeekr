@@ -1,4 +1,7 @@
 import {createBrowserRouter,RouterProvider} from "react-router-dom";
+import Companies from "./Pages/Admin/Companies";
+import CompanySetup from "./Pages/Admin/CompanySetup";
+import CreateCompany from "./Pages/Admin/CreateCompany";
 import Login from "./Pages/Auth/Login";
 import Signup from "./Pages/Auth/Signup";
 import Browse from "./Pages/Browse";
@@ -35,6 +38,18 @@ const appRouter = createBrowserRouter([
   {
     path:"/profile",
     element:<Profile/>
+  },
+  {
+    path:"/admin/companies",
+    element:<Companies/>
+  },
+  {
+    path:"/admin/company/create",
+    element:<CreateCompany/>
+  },
+  {
+    path:"/admin/company/:id",
+    element:<CompanySetup/>
   }
 ]);
 
