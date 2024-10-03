@@ -1,7 +1,10 @@
 import {createBrowserRouter,RouterProvider} from "react-router-dom";
+import AdminJobs from "./Pages/Admin/AdminJobs";
+import Applicants from "./Pages/Admin/Applicants";
 import Companies from "./Pages/Admin/Companies";
 import CompanySetup from "./Pages/Admin/CompanySetup";
 import CreateCompany from "./Pages/Admin/CreateCompany";
+import CreateJob from "./Pages/Admin/CreateJob";
 import Login from "./Pages/Auth/Login";
 import Signup from "./Pages/Auth/Signup";
 import Browse from "./Pages/Browse";
@@ -50,6 +53,18 @@ const appRouter = createBrowserRouter([
   {
     path:"/admin/company/:id",
     element:<CompanySetup/>
+  }, 
+  {
+    path:"/admin/jobs",
+    element:<AdminJobs/>
+  },
+  {
+    path:"/admin/job/create",
+    element:<CreateJob/>
+  },
+  {
+    path:"/admin/job/:id/applicants",
+    element:<Applicants/>
   }
 ]);
 
