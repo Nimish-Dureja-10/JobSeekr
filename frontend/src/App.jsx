@@ -5,6 +5,7 @@ import Companies from "./Pages/Admin/Companies";
 import CompanySetup from "./Pages/Admin/CompanySetup";
 import CreateCompany from "./Pages/Admin/CreateCompany";
 import CreateJob from "./Pages/Admin/CreateJob";
+import ProtectedRoutes from "./Pages/Admin/ProtectedRoutes";
 import Login from "./Pages/Auth/Login";
 import Signup from "./Pages/Auth/Signup";
 import Browse from "./Pages/Browse";
@@ -44,27 +45,27 @@ const appRouter = createBrowserRouter([
   },
   {
     path:"/admin/companies",
-    element:<Companies/>
+    element:<ProtectedRoutes><Companies/></ProtectedRoutes>  
   },
   {
     path:"/admin/company/create",
-    element:<CreateCompany/>
+    element:<ProtectedRoutes><CreateCompany/></ProtectedRoutes>
   },
   {
     path:"/admin/company/:id",
-    element:<CompanySetup/>
+    element:<ProtectedRoutes><CompanySetup/></ProtectedRoutes>
   }, 
   {
     path:"/admin/jobs",
-    element:<AdminJobs/>
+    element:<ProtectedRoutes><AdminJobs/></ProtectedRoutes>
   },
   {
     path:"/admin/job/create",
-    element:<CreateJob/>
+    element:<ProtectedRoutes><CreateJob/></ProtectedRoutes>
   },
   {
     path:"/admin/job/:id/applicants",
-    element:<Applicants/>
+    element:<ProtectedRoutes><Applicants/></ProtectedRoutes>
   }
 ]);
 

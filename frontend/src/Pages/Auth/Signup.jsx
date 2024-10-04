@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { RadioGroup } from '@/components/ui/radio-group'
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import {Link,useNavigate} from "react-router-dom";
 import axios from 'axios';
 import { USER_API_END_POINT } from '@/utils/constant';
@@ -24,7 +24,7 @@ const Signup = () => {
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const {loading} = useSelector(store=>store.auth);
+    const {loading,user} = useSelector(store=>store.auth);
 
     const changeEventHandler = (e) => {
         setInput({...input,[e.target.name]:e.target.value});
@@ -63,7 +63,13 @@ const Signup = () => {
         } finally {
             dispatch(setLoading(false));
         }
-    }
+    };
+
+    useEffect(()=>{
+        if(user) {
+            navigate("/");
+        }
+    },[]);
 
   return (
     <div>
