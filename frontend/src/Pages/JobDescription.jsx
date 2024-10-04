@@ -9,6 +9,7 @@ import {useSelector,useDispatch} from "react-redux";
 import { setSingleJob } from '@/redux/jobSlice';
 import { APPLICATION_API_END_POINT } from '@/utils/constant';
 import {toast} from "sonner";
+import { motion } from 'framer-motion';
 
 const JobDescription = () => {
     const {user} = useSelector(store=>store.auth);
@@ -51,7 +52,10 @@ const JobDescription = () => {
   },[jobId,dispatch,user?._id]);
 
   return (
-      <>
+      <motion.div initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 100 }}
+      transition={{ duration: 0.3 }}>
         <div className='flex items-end justify-end max-w-7xl mx-auto mt-4'>
             <Button className="rounded-full" onClick={()=>navigate("/jobs")} ><X className='h-4 w-4' /></Button>
         </div>
@@ -86,7 +90,7 @@ const JobDescription = () => {
                 <h1 className='font-bold my-1'>Posted Date : <span className='font-normal text-gray-800'>{singleJob?.createdAt.slice(0,10)}</span></h1>
             </div>
         </div>
-    </>
+    </motion.div>
   )
 }
 

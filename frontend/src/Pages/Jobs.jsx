@@ -1,13 +1,13 @@
 import Navbar from '@/components/container/Navbar'
 import FilterCard from '@/components/JobComponents/FilterCard'
 import Job from '@/components/JobComponents/Job'
-import useGetAllJobs from '@/hooks/useGetAllJobs';
 import React from 'react'
-import {useSelector} from "react-redux";
-
-// const jobsArray = [1,2,3,4,5,6,7,8];
+import { useSelector} from "react-redux";
+import { motion } from 'framer-motion';
+import useGetAllJobs from '@/hooks/useGetAllJobs';
 
 const Jobs = () => {
+  useGetAllJobs();
   const {allJobs} = useSelector(store=>store.jobs);
 
   return (
@@ -25,7 +25,12 @@ const Jobs = () => {
                 <div className='grid grid-cols-3 gap-4'>
                   {
                     allJobs.map((job)=>(
-                      <div key={job._id}><Job job={job} /></div>
+                      <motion.div initial={{ opacity: 0, y: -100 }} 
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 100 }}
+                      transition={{ duration: 0.3 }} key={job._id}>
+                        <Job job={job} />
+                      </motion.div>
                     ))
                   }
                 </div>

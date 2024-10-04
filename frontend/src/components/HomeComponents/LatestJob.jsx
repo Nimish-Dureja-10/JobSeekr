@@ -1,11 +1,10 @@
 import React from 'react'
 import LatestJobCard from './LatestJobCard'
 import {useSelector} from "react-redux";
-
-// const randomJobs = [1,2,3,4,5,6,7,8];
+import { motion } from 'framer-motion';
 
 const LatestJob = () => {
-
+  
   const {allJobs} = useSelector(store=>store.jobs);
 
   return (
@@ -16,7 +15,12 @@ const LatestJob = () => {
           allJobs.length <=0 ? <span>No Job Found</span>
           :
            allJobs?.slice(0,6)?.map((job)=>(
-            <LatestJobCard key={job._id} job={job} />
+            <motion.div initial={{ opacity: 0, y: -100 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 100 }}
+              transition={{ duration: 0.3 }} >
+              <LatestJobCard key={job._id} job={job} />
+            </motion.div>
           ))
         }
       </div>
