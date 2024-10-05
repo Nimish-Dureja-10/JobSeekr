@@ -21,8 +21,6 @@ const allowedUrls = [
     "https://job-seekr-rjhtjwzb3-nimishdureja10s-projects.vercel.app"
 ];
 
-app.use(cors());
-
 app.use(cors({
     origin : allowedUrls,
     credentials:true,
