@@ -16,19 +16,12 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 
-// const corsOptions = {
-//     origin : ["http://localhost:5173",
-//     "https://job-seekr-one.vercel.app"
-// ],
-//     credentials: true,
-// };
-
-// app.use(cors(corsOptions));
-
 const allowedUrls = [
     "https://job-seekr-one.vercel.app",
-    "job-seekr-rjhtjwzb3-nimishdureja10s-projects.vercel.app"
+    "https://job-seekr-rjhtjwzb3-nimishdureja10s-projects.vercel.app"
 ];
+
+app.use(cors());
 
 app.use(cors({
     origin : allowedUrls,
