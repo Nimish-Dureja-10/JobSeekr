@@ -26,7 +26,8 @@ app.use(cookieParser());
 // app.use(cors(corsOptions));
 
 const allowedUrls = [
-    "https://job-seekr-one.vercel.app"
+    "https://job-seekr-one.vercel.app",
+    "job-seekr-rjhtjwzb3-nimishdureja10s-projects.vercel.app"
 ];
 
 app.use(cors({
