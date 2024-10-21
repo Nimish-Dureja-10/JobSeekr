@@ -21,7 +21,8 @@ app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 
 const allowedUrls = [
-    "http://localhost:5173"
+    "http://localhost:5173",
+    "https://jobseekr-e4gk.onrender.com"
 ];
 
 app.use(cors({
