@@ -12,6 +12,7 @@ import Browse from "./Pages/Browse";
 import Home from "./Pages/Home";
 import JobDescription from "./Pages/JobDescription";
 import Jobs from "./Pages/Jobs";
+import PageNotFound from "./Pages/PageNotFound";
 import Profile from "./Pages/Profile";
 
 const appRouter = createBrowserRouter([
@@ -66,6 +67,10 @@ const appRouter = createBrowserRouter([
   {
     path:"/admin/job/:id/applicants",
     element:<ProtectedRoutes><Applicants/></ProtectedRoutes>
+  },
+  {
+    path:"*",
+    element:<PageNotFound />
   }
 ]);
 

@@ -3,6 +3,7 @@ import CategoryCarousel from '@/components/HomeComponents/CategoryCarousel'
 import Footer from '@/components/HomeComponents/Footer'
 import HeroSection from '@/components/HomeComponents/HeroSection'
 import LatestJob from '@/components/HomeComponents/LatestJob'
+import Layout from '@/SEO/Layout'
 import useGetAllJobs from '@/hooks/useGetAllJobs'
 import React,{useEffect} from 'react'
 import {useSelector} from "react-redux";
@@ -21,13 +22,13 @@ const Home = () => {
   
 
   return (
-    <div>
+    <Layout>
         <Navbar />
         <HeroSection />
         <CategoryCarousel />
         <LatestJob />
         <Footer />
-    </div>
+    </Layout>
   )
 }
 

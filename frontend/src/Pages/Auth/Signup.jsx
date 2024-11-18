@@ -11,6 +11,7 @@ import { toast } from "sonner";
 import { setLoading } from '@/redux/authSlice'
 import {useDispatch,useSelector} from "react-redux";
 import { Loader2 } from 'lucide-react'
+import Layout from '@/SEO/Layout'
 
 const Signup = () => {
 
@@ -73,7 +74,7 @@ const Signup = () => {
     },[]);
 
   return (
-    <div>
+    <Layout title={"Register - Create Your JobSeekr Account"} description={"Sign up for JobSeekr and create your account to access job listings, manage applications, and get personalized job recommendations. Start your career journey today with a free JobSeekr profile."} keywords={"register, sign up, create account, jobseekr registration, job seeker sign up, career profile, create job account, job search registration, job seeker profile, get started with JobSeekr"}>
         <Navbar />
         <div className='flex items-center justify-center max-w-7xl mx-auto'>
             <form onSubmit={submitHandler} className='w-1/2 border border-gray-200 rounded-md p-4 my-10'>
@@ -117,7 +118,7 @@ const Signup = () => {
                 <span className='text-md text-gray-400'>Already have an account? <Link className='text-blue-600 hover:underline' to="/login">Login</Link></span>
             </form>
         </div>
-    </div>
+    </Layout>
   )
 }
 

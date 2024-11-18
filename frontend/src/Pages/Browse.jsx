@@ -5,6 +5,7 @@ import { setSearchQuery } from '@/redux/jobSlice';
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
+import Layout from '@/SEO/Layout';
 
 const Browse = () => {  
 
@@ -19,7 +20,7 @@ const Browse = () => {
   },[])
 
   return (
-    <div>
+    <Layout title={"Browse Jobs - Search Job Listings & Opportunities"} description={"Browse jobs and discover a variety of job listings across different industries at JobSeekr. Find full-time, part-time, remote, and freelance job opportunities. Start your job search today with JobSeekr!"} keywords={"browse jobs, job search, job listings, full-time jobs, part-time jobs, remote jobs, freelance jobs, job opportunities, job openings, career opportunities"}>
         <Navbar />
         <div className='max-w-7xl mx-auto my-10'>
             <h1 className='text-center text-xl font-semibold'>Search Results <span>({allJobs.length})</span></h1>
@@ -38,7 +39,7 @@ const Browse = () => {
                 }
             </div>
         </div>
-    </div>
+    </Layout>
   )
 }
 

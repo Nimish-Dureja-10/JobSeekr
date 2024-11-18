@@ -11,6 +11,7 @@ import { USER_API_END_POINT } from '@/utils/constant';
 import {useDispatch,useSelector} from "react-redux";
 import { setLoading, setUser } from '@/redux/authSlice';
 import {Loader2} from "lucide-react";
+import Layout from '@/SEO/Layout'
 
 const Login = () => {
   const [input,setInput] = useState({
@@ -57,7 +58,7 @@ const Login = () => {
     },[])
 
   return (
-    <div>
+    <Layout title={"Login - Access Your JobSeekr Account"} description={"Login to your JobSeekr account to find the latest job listings, manage applications, and update your profile. Get started with your career search today by accessing your personalized dashboard."} keywords={"login, jobseekr login, sign in, user login, access account, job seeker login, login to JobSeekr, job search account, career dashboard, manage applications, job seeker profile"}>
         <Navbar />
         <div className='flex items-center justify-center mt-16 max-w-7xl mx-auto'>
             <form onSubmit={submitHandler} className='w-1/2 border border-gray-200 rounded-md p-4 my-10'>
@@ -89,7 +90,7 @@ const Login = () => {
                 <span className='text-md text-gray-400'>Don't have an account? <Link className='text-blue-600 hover:underline' to="/signup">Sign Up</Link></span>
             </form>
         </div>
-    </div>
+    </Layout>
   )
 }
 

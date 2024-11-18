@@ -9,6 +9,7 @@ import {toast} from "sonner";
 import { COMPANY_API_END_POINT } from '@/utils/constant'
 import { setSingleCompany } from '@/redux/companySlice'
 import {useDispatch} from "react-redux";
+import Layout from '@/SEO/Layout'
 
 const CreateCompany = () => {
     const navigate = useNavigate();
@@ -35,7 +36,7 @@ const CreateCompany = () => {
     }
 
   return (
-    <div>
+    <Layout title={"Create Company - Admin Dashboard"} description={"Admin panel for creating new company profiles on JobSeekr. Add company details, job listings, and manage hiring activities. Streamline your recruitment process by adding company information to the platform."} keywords={"create company, add company profile, company management, company details, job listings, recruiter tools, admin dashboard, manage companies, recruitment management, add company job posts, company profile creation, job seeker platform"}>
         <Navbar/>
         <div className='max-w-4xl mx-auto'>
             <div className='my-10'>
@@ -49,7 +50,7 @@ const CreateCompany = () => {
                 <Button onClick={createNewCompany}>Continue</Button>
             </div>
         </div>
-    </div>
+    </Layout>
   )
 }
 

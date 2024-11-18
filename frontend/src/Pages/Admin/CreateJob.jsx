@@ -10,6 +10,7 @@ import { JOB_API_END_POINT } from '@/utils/constant';
 import {toast} from "sonner";
 import {useNavigate} from 'react-router-dom';
 import {Loader2} from "lucide-react";
+import Layout from '@/SEO/Layout'
 
 const CreateJob = () => {
 
@@ -62,7 +63,7 @@ const CreateJob = () => {
     }
 
   return (
-    <div>
+    <Layout title={"Create Job - Admin Dashboard"} description={"Admin panel for creating new job postings on JobSeekr. Add job details, set requirements, and publish job listings to attract top talent. Manage your recruitment process efficiently with our easy-to-use platform."} keywords={"create job, add job posting, job listings, job management, recruit jobs, job creation, hiring process, job requirements, job description, admin dashboard, job posting platform, publish job openings, job vacancies, job seeker platform"}>
         <Navbar />
         <div className='flex items-center justify-center my-5 w-screen'>
             <form onSubmit={handleSubmit} className='p-8 max-w-4xl border border-gray-200 shadow-lg my-5 rounded-md'>
@@ -129,7 +130,7 @@ const CreateJob = () => {
                 }
             </form>
         </div>
-    </div>
+    </Layout>
   )
 }
 

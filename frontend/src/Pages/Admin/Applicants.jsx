@@ -6,6 +6,7 @@ import { APPLICATION_API_END_POINT } from '@/utils/constant';
 import {useParams} from "react-router-dom";
 import {useDispatch,useSelector} from "react-redux";
 import { setApplicants } from '@/redux/applicationSlice';
+import Layout from '@/SEO/Layout';
 
 const Applicants = () => {
 
@@ -29,13 +30,13 @@ const Applicants = () => {
   },[]);  
 
   return (
-    <div>
+    <Layout title={"View Applicants - Admin Dashboard"} description={"Admin panel for viewing and managing job applicants on JobSeekr. Track applicant status, review resumes, and manage hiring processes for your job listings. Streamline recruitment and find the right talent quickly."} keywords={"view applicants, job applicants, applicant management, recruitment dashboard, job applications, track applicants, applicant status, manage applicants, hiring process, review resumes, candidate management, job seeker platform, recruitment tools"}>
         <Navbar/>
         <div className='max-w-6xl mx-auto my-6'>
             <h1 className='font-bold text-xl my-4'>Applicants ({applicants?.applications?.length})</h1>
             <ApplicantsTable />
         </div>
-    </div>
+    </Layout>
   )
 }
 

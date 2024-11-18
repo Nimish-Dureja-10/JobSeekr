@@ -7,6 +7,7 @@ import React,{useState,useEffect} from 'react'
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import { setSearchCompanyByKeyword } from '@/redux/companySlice'
+import Layout from '@/SEO/Layout'
 
 const Companies = () => {
     const navigate = useNavigate();
@@ -20,7 +21,7 @@ const Companies = () => {
     },[input]);
 
   return (
-    <div>
+    <Layout title={"Admin Dashboard - Manage Companies"} description={"Admin panel for managing company profiles, job listings, and hiring activities on JobSeekr. View, edit, or add company information and track job postings. Simplify your recruitment process today!"} keywords={"admin dashboard, manage companies, company profiles, job listings, job postings, company management, recruiter tools, hiring management, manage job openings, recruitment dashboard, company administration, job seeker platform"}>
         <Navbar />
         <div className='max-w-6xl mx-auto my-10'>
             <div className='flex items-center justify-between'>
@@ -29,7 +30,7 @@ const Companies = () => {
             </div>
             <CompaniesTable />
         </div>
-    </div>
+    </Layout>
   )
 }
 

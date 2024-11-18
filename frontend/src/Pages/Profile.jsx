@@ -9,6 +9,7 @@ import AppliedJobTable from '@/components/ProfileComponents/AppliedJobTable';
 import UpdateProfileDiaglog from '@/components/ProfileComponents/UpdateProfileDiaglog';
 import { useSelector } from "react-redux";
 import useGetAllAppliedJobs from '@/hooks/useGetAllAppliedJobs';
+import Layout from '@/SEO/Layout';
 
 // const skills = ["Html","CSS","Javascript","ReactJs","NodeJs","MongoDB","AWS"];
 const isResume = true;
@@ -21,7 +22,7 @@ const Profile = () => {
   const {user} = useSelector(store=>store.auth);
     
   return (
-    <div>
+    <Layout title={"My Profile - Manage Your Job Applications"} description={"View and manage your job preferences, applications, and career profile on JobSeekr. Keep your resume updated, track job applications, and get personalized job recommendations tailored to your skills and interests."} keywords={"job profile, career profile, job applications, job preferences, update resume, job seeker profile, application status, job tracker, personalized job recommendations, manage profile, job search profile, update job settings"}>
         <Navbar/>
         <div className='max-w-4xl mx-auto bg-white border border-gray-200 rounded-2xl my-5 p-8'>
             <div className='flex justify-between'>
@@ -77,7 +78,7 @@ const Profile = () => {
             <AppliedJobTable />
         </div>
         <UpdateProfileDiaglog open={open} setOpen={setOpen} />
-    </div>
+    </Layout>
   )
 }
 

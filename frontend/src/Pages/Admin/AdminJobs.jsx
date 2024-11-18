@@ -7,6 +7,7 @@ import {useDispatch} from "react-redux";
 import AdminJobsTable from '@/components/adminComponents/AdminJobsTable'
 import useGetAllAdminJobs from '@/hooks/useGetAllAdminJobs'
 import { setSearchJobByKeyword } from '@/redux/jobSlice';
+import Layout from '@/SEO/Layout';
 
 const AdminJobs = () => {
     useGetAllAdminJobs();
@@ -20,7 +21,7 @@ const AdminJobs = () => {
     },[input]);
 
   return (
-    <div>
+    <Layout title={"Admin Dashboard - Manage Jobs"} description={"dmin panel for managing job listings, monitoring job applications, and overseeing recruitment activities on JobSeekr. Add, edit, or remove job posts, track applicants, and streamline your hiring process."} keywords={"admin dashboard, manage jobs, job listings, job postings, recruit jobs, hiring process, monitor applications, manage job openings, edit job listings, track job applications, job posting management, recruitment tools, job administration"}>
         <Navbar />
         <div className='max-w-6xl mx-auto my-10'>
             <div className='flex items-center justify-between'>
@@ -29,7 +30,7 @@ const AdminJobs = () => {
             </div>
             <AdminJobsTable />
         </div>
-    </div>
+    </Layout>
   )
 }
 
