@@ -38,7 +38,7 @@ const CreateCompany = () => {
   return (
     <Layout title={"Create Company - Admin Dashboard"} description={"Admin panel for creating new company profiles on JobSeekr. Add company details, job listings, and manage hiring activities. Streamline your recruitment process by adding company information to the platform."} keywords={"create company, add company profile, company management, company details, job listings, recruiter tools, admin dashboard, manage companies, recruitment management, add company job posts, company profile creation, job seeker platform"}>
         <Navbar/>
-        <div className='max-w-4xl mx-auto'>
+        <div className='w-[90%] lg:max-w-4xl mx-auto'>
             <div className='my-10'>
                 <h1 className='font-bold text-2xl' >Your Company Name?</h1>
                 <p className='text-gray-500'>What would you like to name your comany? You can change this later.</p>

@@ -9,8 +9,8 @@ const LatestJob = () => {
 
   return (
     <div className='max-w-7xl mx-auto my-20'>
-      <h1 className='text-4xl font-semibold'><span className='text-[#6a32c2]'>Latest & Top</span> Job Openings</h1>
-      <div className='grid grid-cols-3 gap-4 my-10'>
+      <h1 className='text-center lg:text-start text-4xl font-semibold'><span className='text-[#6a32c2]'>Latest & Top</span> Job Openings</h1>
+      <div className='px-6 grid lg:grid-cols-3 gap-4 my-10'>
         {
           allJobs.length <=0 ? <span>No Job Found</span>
           :

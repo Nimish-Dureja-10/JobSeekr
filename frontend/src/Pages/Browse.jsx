@@ -25,7 +25,7 @@ const Browse = () => {
         <div className='max-w-7xl mx-auto my-10'>
             <h1 className='text-center text-xl font-semibold'>Search Results <span>({allJobs.length})</span></h1>
             <hr  className='mt-4'/>
-            <div className='grid grid-cols-3 gap-6 mt-4'>
+            <div className='grid px-6 lg:grid-cols-3 gap-6 mt-4'>
                 {
                     allJobs.map((job)=>(
                         <motion.div initial={{ opacity: 0, y: -100 }}

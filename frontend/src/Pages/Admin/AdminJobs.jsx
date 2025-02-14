@@ -23,7 +23,7 @@ const AdminJobs = () => {
   return (
     <Layout title={"Admin Dashboard - Manage Jobs"} description={"dmin panel for managing job listings, monitoring job applications, and overseeing recruitment activities on JobSeekr. Add, edit, or remove job posts, track applicants, and streamline your hiring process."} keywords={"admin dashboard, manage jobs, job listings, job postings, recruit jobs, hiring process, monitor applications, manage job openings, edit job listings, track job applications, job posting management, recruitment tools, job administration"}>
         <Navbar />
-        <div className='max-w-6xl mx-auto my-10'>
+        <div className='w-[90%] lg:max-w-6xl mx-auto my-10'>
             <div className='flex items-center justify-between'>
                 <Input type="text" className="w-fit" placeholder="Filter by name or role" value={input} onChange={(e)=>setInput(e.target.value)} />
                 <Button onClick={()=>navigate("/admin/job/create")}>New Job</Button>

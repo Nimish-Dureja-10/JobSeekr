@@ -81,7 +81,7 @@ const CompanySetup = () => {
   return (
     <div>
         <Navbar/>
-        <div className='max-w-xl mx-auto my-6 border border-gray-300 p-8 rounded-lg bg-gray-100'>
+        <div className='w-[90%] lg:max-w-xl mx-auto my-6 border border-gray-300 p-8 rounded-lg bg-gray-100'>
             <form onSubmit={handleSubmit}>
                 <div className='flex items-center justify-between py-4 px-2'>
                     <Button variant="outline" onClick={()=>navigate("/admin/companies")} className="flex items-center gap-2 text-gray-500 font-semibold">
@@ -107,7 +107,7 @@ const CompanySetup = () => {
                         <Label>Location</Label>
                         <Input type="text" placeholder="India or Remote" name="location" value={input.location} onChange={changeEventHandler} />
                     </div>
-                    <div>
+                    <div className='mb-4'>
                         <Label>Company Logo</Label>
                         <Input type="file" accept={"image/*"} onChange={fileHandler} />
                     </div>

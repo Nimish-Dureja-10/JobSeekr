@@ -14,6 +14,8 @@ const Home = () => {
   const {user} = useSelector(store=>store.auth);
   const navigate = useNavigate();
 
+  console.log(user);
+
   useEffect(() => {
     if(user?.role === 'recruiter') {
       navigate("/admin/companies");
