@@ -58,11 +58,11 @@ const JobDescription = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 100 }}
         transition={{ duration: 0.3 }}>
-            <div className='flex items-end justify-end max-w-7xl mx-auto mt-4'>
+            <div className='flex items-end justify-end w-[90%] lg:max-w-7xl mx-auto mt-4'>
                 <Button className="rounded-full" onClick={()=>navigate("/jobs")} ><X className='h-4 w-4' /></Button>
             </div>
-            <div className='max-w-7xl mx-auto my-6 bg-gray-200 p-4 rounded-lg'>
-                <div className='flex items-center justify-between'>
+            <div className='w-[90%] lg:max-w-7xl mx-auto my-6 bg-gray-200 p-4 rounded-lg'>
+                <div className='flex flex-col lg:flex-row items-center justify-between'>
                     <div>
                         <h1 className='font-bold text-xl'>{singleJob?.title}</h1>
                         <div className='flex items-center gap-4 my-2'>
@@ -72,7 +72,7 @@ const JobDescription = () => {
                         </div>
                     </div>
                     <Button disabled={isApplied} onClick={isApplied ? null : applyJobHandler}
-                        className={`rounded-lg ${isApplied ? 'bg-gray-600 cursor-not-allowed' 
+                        className={`rounded-lg w-[80%] lg:w-auto ${isApplied ? 'bg-gray-600 cursor-not-allowed' 
                         :
                         'bg-[#7209b7] cursor-pointer hover:bg-[#5f32ad]'}`}>
                     {
@@ -80,7 +80,7 @@ const JobDescription = () => {
                     }
                     </Button>
                 </div>
-                <h1 className='py-2 border-b-2 border-b-gray-300 font-medium'>Job Description</h1>
+                <h1 className='py-2 border-b-2 text-center lg:text-start border-b-gray-300 font-medium'>Job Description</h1>
                 <div className='my-4 p-2'>
                     <h1 className='font-bold my-1'>Role : <span className='font-normal text-gray-800'>{singleJob?.title}</span></h1>
                     <h1 className='font-bold my-1'>Location : <span className='font-normal text-gray-800'>{singleJob?.location}</span></h1>
