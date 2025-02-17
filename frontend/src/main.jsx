@@ -20,3 +20,5 @@ createRoot(document.getElementById('root')).render(
     <Toaster/>
   </StrictMode>,
 )
+
+// Frontend build updated
